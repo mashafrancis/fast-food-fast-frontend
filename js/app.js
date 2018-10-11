@@ -17,20 +17,26 @@
 //     data.confirm_password = form.confirm_password.value;
 //
 //     fetch("http://127.0.0.1:5000/api/v2/auth/signup", {
-//         method: "POST",
-//         headers: {"Content-type": "application/json"},
+//         method: 'POST',
+//         mode: 'cors',
+//         headers: {
+//             'Access-Control-Allow-Origin': '*',
+//             'Content-Type': 'application/json'
+//         },
 //         body: JSON.stringify(data)
 //     })
-//         .then((res) => {
-//             if (res.status === 201) {
-//                 res.json().then((data) => {
+//         .then((response) => {
+//             if (response.status === 201) {
+//                 response.json().then((data) => {
 //                     window.location = "index.html";
 //                 });
 //             }
 //             else {
-//                 res.json().then((data) => {
+//                 response.json().then((data) => {
 //                     alert.classList.toggle("show");
 //                     document.getElementById("message").textContent = data.message;
+//                     document.getElementById('message').style.color = 'red';
+//                     document.getElementById('message').style.display = 'block';
 //                 });
 //             }
 //         })

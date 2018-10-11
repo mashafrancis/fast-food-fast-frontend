@@ -31,19 +31,20 @@
 </header>
 <div class="container-2">
     <div class="wrapper-2">
-        <form>
+        <form id="login_form" action="menu.html">
             <div class="img-container">
+                <p id="message"></p>
                 <img src="img/avatar.png" alt="Avatar" class="avatar">
             </div>
             <h3>Login</h3>
             <ul class="flex-outer">
                 <li>
                     <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Email">
+                    <input type="text" id="email" placeholder="Email" required>
                 </li>
                 <li>
                     <label for="password">Password</label>
-                    <input type="text" id="password" placeholder="Enter your password">
+                    <input type="text" id="password" placeholder="Enter your password" required>
                 </li>
                 <li>
                     <label>
@@ -51,7 +52,7 @@
                     </label>
                 </li>
                 <li>
-                    <button type="submit"><a href="profile.html">Submit</a></button>
+                    <button type="submit">Submit</button>
                 </li>
             </ul>
             <p><a href="admin-login.html">Admin Login</a></p>
@@ -60,6 +61,7 @@
         </form>
     </div>
 </div>
+<script src="js/login.js"></script>
 </body>
 
 </html>
