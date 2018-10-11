@@ -1,7 +1,7 @@
-let register = document.getElementById('signup_form')
+let register = document.getElementById('signup_form');
 
 register.onclick = function () {
-    document.getElementById('message').style.display='none';
+    document.getElementById('message').style.display = 'none';
     let username = document.getElementById('username').value;
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
@@ -20,10 +20,11 @@ register.onclick = function () {
             "password": password,
             "confirm_password": confirm_password
         })
+    })
         .then(res => res.json())
         .then(data => {
-            if (data['message'] === 'User %s successfully registered.' % (username)){
-                alert('Welcome ' + data['username'] +', you may now login into your account');
+            if (data['message'] === 'User %s successfully registered.' % (username)) {
+                alert('Welcome ' + data['username'] + ', you may now login into your account');
                 document.getElementById('flash').innerHTML = ('Login Here!');
             }
             else {
@@ -32,5 +33,4 @@ register.onclick = function () {
                 document.getElementById('message').style.display = 'block';
             }
         })
-    })
-}
+};
