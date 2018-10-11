@@ -1,7 +1,8 @@
-let register = document.getElementById('signup_form');
+document.getElementById('signup_form').addEventListener('submit', signup);
 
-register.onclick = function () {
-    document.getElementById('message').style.display = 'none';
+function signup(e) {
+    e.preventDefault();
+
     let username = document.getElementById('username').value;
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
@@ -21,16 +22,20 @@ register.onclick = function () {
             "confirm_password": confirm_password
         })
     })
-        .then(res => res.json())
+        .then(response => response.json())
+        .catch(error => console.error(error))
         .then(data => {
-            if (data['message'] === 'User %s successfully registered.' % (username)) {
-                alert('Welcome ' + data['username'] + ', you may now login into your account');
-                document.getElementById('flash').innerHTML = ('Login Here!');
+            if (data['status'] === 201) {
+                document.getElementById('message').innerHTML = data['message']
             }
             else {
-                document.getElementById('message').innerHTML = 'User has not been created. Try again!';
+                document.getElementById('message').innerHTML = data['message'];
+                // document.getElementById('message').innerHTML = 'User has not been created. Try again!';
                 document.getElementById('message').style.color = 'red';
                 document.getElementById('message').style.display = 'block';
             }
         })
-};
+}
+
+let login = document.getElementById('login');
+
