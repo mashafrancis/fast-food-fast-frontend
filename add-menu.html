@@ -15,12 +15,12 @@
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="./js/main.js"></script>
-    <script type="text/javascript">
-        function Confirm(form) {
-            alert("Thank you for updating me. Now I'm yummy again!");
-            form.submit();
-        }
-    </script>
+    <!--<script type="text/javascript">-->
+        <!--function Confirm(form) {-->
+            <!--alert("Food item created successfully!");-->
+            <!--form.submit();-->
+        <!--}-->
+    <!--</script>-->
 
 </head>
 <body>
@@ -48,8 +48,8 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li class="active">
-                <a href="customers.html">
+            <li>
+                <a href="#">
                     <span><i class="fas fa-user"></i></span>
                     <span>Customers</span>
                 </a>
@@ -66,22 +66,16 @@
                     <span>Food Section</span>
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="menu-category.html">
                     <span><i class="fas fa-utensils"></i></span>
                     <span>Menu</span>
                 </a>
             </li>
             <li>
-                <a href="reviews.html">
+                <a href="#">
                     <span><i class="fas fa-comment-alt"></i></span>
                     <span>Customer Reviews</span>
-                </a>
-            </li>
-            <li>
-                <a href="index.html">
-                    <span><i class="fas fa-sign-out-alt"></i></span>
-                    <span>Logout</span>
                 </a>
             </li>
         </ul>
@@ -89,14 +83,31 @@
 </div>
 <div class="main-content">
     <div class="title">
-        User has been removed completely!
-        <a href="customers.html">
-            <button class="admin-button"><i class="fas fa-arrow-left"></i>&nbsp;Back</button>
+        Add New Menu
+        <a href="add-menu.html">
+            <button class="admin-button">Add</button>
         </a>
     </div>
     <div class="wrapper-order">
+        <p id="message"></p>
+        <form id="menu_category">
+            <ul class="flex-outer">
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter the name of food">
+                </li>
+                <li>
+                    <label for="description">Description</label>
+                    <textarea name="text" id="description" placeholder="Enter the food details..."></textarea>
+                </li>
+                <li>
+                    <button type="submit">Create New Menu</button>
+                </li>
+            </ul>
+        </form>
     </div>
 </div>
+<script src="js/menu-category.js"></script>
 
 </body>
 </html>
