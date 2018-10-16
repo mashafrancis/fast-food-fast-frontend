@@ -107,6 +107,24 @@
         </form>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        //collapse and expand sections
+        $('.breakrow').click(function () {
+
+            $(this).nextUntil('tr.breakrow').animate({height: "toggle", opacity: "toggle"}, "slow");
+        })
+    });
+
+    $(document).ready(function () {
+        $('.check').click(function () {
+            $(this).nextUntil('tr.call').css("color", "green");
+
+        })
+    })
+</script>
 <script src="js/menu-category.js"></script>
 
 </body>

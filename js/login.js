@@ -37,9 +37,10 @@ function login(e) {
                 // if (payload.admin) {
                 else {
                     document.getElementById('message').innerHTML = data['message'];
-                    document.getElementById('message').style.color = 'white';
+                    document.getElementById('message').style.color = '#272727';
                     document.getElementById('message').style.display = 'block';
-                    document.getElementById('message').style.backgroundColor = '#FF9800'
+                    document.getElementById('message').style.padding = '5px';
+                    document.getElementById('message').style.backgroundColor = '#ecee5a'
                 }
             }
         )
