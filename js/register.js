@@ -29,12 +29,32 @@ function signup(e) {
                 document.getElementById('message').innerHTML = data['message']
             }
             else {
-                document.getElementById('message').innerHTML = data['message'];
-                document.getElementById('message').style.color = '#272727';
-                document.getElementById('message').style.display = 'block';
-                document.getElementById('message').style.padding = '5px';
-                document.getElementById('message').style.backgroundColor = '#ecee5a'
+                // alert = document.getElementById('message').innerHTML = data['message'];
+                // document.getElementById('message').style.color = '#272727';
+                // document.getElementById('message').style.display = 'block';
+                // document.getElementById('message').style.padding = '5px';
+                // document.getElementById('message').style.backgroundColor = '#ecee5a'
+                showError(data['message'])
             }
         })
+}
+
+// Show error
+function showError(error) {
+    // Create a div
+    const errorDiv = document.createElement('div');
+
+    // Get elements
+    const card = document.querySelector('.signup-form');
+    const heading = document.querySelector('.heading');
+
+    // Add class
+    errorDiv.className = 'alert alert-info';
+
+    // Create test node and append to div
+    errorDiv.appendChild(document.createTextNode(error));
+
+    // Insert error before heading
+    card.insertBefore(errorDiv, heading);
 }
 

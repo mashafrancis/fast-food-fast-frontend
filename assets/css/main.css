@@ -214,7 +214,7 @@ a.btn:hover {
     align-items: center;
 
     margin: 0;
-    background: url("../img/10.jpg") no-repeat center center fixed;
+    background: url("../../img/10.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -251,7 +251,7 @@ a.btn:hover {
     align-items: center;
 
     margin: 0;
-    background: url("../img/salad.jpg") no-repeat center center fixed;
+    background: url("../../img/salad.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -325,7 +325,7 @@ input[type="search"] {
 }
 
 .alert.success {background-color: #4CAF50;}
-.alert.info {background-color: #2196F3;}
+.alert-info {background-color: #2196F3;}
 .alert.warning {background-color: #ff9800;}
 
 
@@ -408,7 +408,7 @@ input[type="search"] {
 .index-banner {
     width: 100%;
     height: 100vh;
-    background: url('../img/10.jpg') no-repeat center;
+    background: url('../../img/10.jpg') no-repeat center;
     background-size: cover;
     display: table;
 }
@@ -448,7 +448,7 @@ input[type="search"] {
     margin: 16px 16px 0;
     width: calc(100% - 32px);
     height: 100px;
-    background: url('../img/9.jpg') no-repeat center;
+    background: url('../../img/9.jpg') no-repeat center;
     background-size: cover;
     display: table;
 }
@@ -509,27 +509,27 @@ input[type="search"] {
 }
 
 #category-1 {
-    background-image: url("../img/burger1.jpg");
+    background-image: url("../../img/burger1.jpg");
 }
 
 #category-2 {
-    background-image: url("../img/pizza.jpg");
+    background-image: url("../../img/pizza.jpg");
 }
 
 #category-3 {
-    background-image: url("../img/salad.jpg");
+    background-image: url("../../img/salad.jpg");
 }
 
 #category-4 {
-    background-image: url("../img/fries.jpg");
+    background-image: url("../../img/fries.jpg");
 }
 
 #category-5 {
-    background-image: url("../img/pasta1.jpg");
+    background-image: url("../../img/pasta1.jpg");
 }
 
 #category-6 {
-    background-image: url("../img/drinks.jpg");
+    background-image: url("../../img/drinks.jpg");
 }
 
 /* Footer */
@@ -648,7 +648,7 @@ footer {
 .user-forms {
     align-items: center;
     margin: 0;
-    background: url("../img/drinks.jpg") no-repeat center center fixed;
+    background: url("../../img/drinks.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -909,7 +909,7 @@ img.avatar {
     .index-links div {
         margin: 20px 10px 0;
         height: 230px;
-        background: url('../img/10.jpg') no-repeat center;
+        background: url('../../img/10.jpg') no-repeat center;
         background-size: cover;
         display: table;
         float: left;
