@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fast-Food-Fast</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,
+    900|Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="icon" type="image" href="../UI/img/favicon.ico">
+    <link rel="stylesheet" href="../UI/assets/css/main.css">
+</head>
+
+<body>
+<header>
+    <h2><a href="index.html" class="header-brand"><span class="highlight">Fast Food</span>Fast</a></h2>
+    <nav>
+        <ul>
+            <li><a href="menu.html" title="Menu">Menu</a></li>
+            <li><a href="events.html" title="Events">Events</a></li>
+            <li><a id="loginBtn" href="#" title="Login">Login</a></li>
+            <li><a class="btn" id="signupBtn" href="#" title="Register">Register</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="cover">
+    <h2>The best place to order your meals without delay</h2>
+    <form class="flex-form">
+        <input type="search" placeholder="What do you want to eat today?">
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<div class="wrapper-main">
+    <section class="index-links">
+        <a href="menu.html">
+            <div class="index-boxlink-square" id="category-1">
+                <h3>Burger</h3>
+            </div>
+        </a>
+        <a href="pizza.html">
+            <div class="index-boxlink-rectangle" id="category-2">
+                <h3>Pizza</h3>
+            </div>
+        </a>
+        <a href="salad.html">
+            <div class="index-boxlink-square" id="category-3">
+                <h3>Salads</h3>
+            </div>
+        </a>
+        <a href="fries.html">
+            <div class="index-boxlink-rectangle" id="category-4">
+                <h3>Fries</h3>
+            </div>
+        </a>
+        <a href="pasta.html">
+            <div class="index-boxlink-square" id="category-5">
+                <h3>Pasta</h3>
+            </div>
+        </a>
+        <a href="drinks.html">
+            <div class="index-boxlink-square" id="category-6">
+                <h3>Drinks</h3>
+            </div>
+        </a>
+    </section>
+</div>
+
+<div id="signup-modal" class="modal">
+    <form id="signup_form" class="modal-content animate">
+        <div class="img-container">
+            <span onclick="document.getElementById('signup-modal').style.display='none'"
+                  class="close" title="Close Modal">&times;</span>
+            <p id="message"></p>
+            <!--<img src="../UI/img/avatar.png" alt="Avatar" class="avatar">-->
+        </div>
+        <div class="container-3">
+            <h3 class="heading">Register</h3>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <label for="password">Re-type Password</label>
+            <input type="password" id="confirm_password" placeholder="Confirm your password" required>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+            <button type="submit" class="signupbtn">Sign Up</button>
+            <button type="button"
+                    onclick="document.getElementById('signup-modal').style.display='none'"
+                    class="cancelbtn">Cancel
+            </button>
+        </div>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+</div>
+
+<div id="login-modal" class="modal">
+    <form id="login_form" class="modal-content animate">
+        <div class="img-container">
+            <span onclick="document.getElementById('login-modal').style.display='none'"
+                  class="close" title="Close Modal">&times;</span>
+            <p id="login-message"></p>
+            <!--<img src="../UI/img/avatar.png" alt="Avatar" class="avatar">-->
+        </div>
+        <div class="container-3">
+            <h3 class="heading">Login</h3>
+
+            <label for="login-email">Email</label>
+            <input type="text" id="login-email" placeholder="Enter your email" required>
+
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Enter your password" required>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            <p></p>
+
+            <button type="submit" class="loginbtn" onclick="showNotifications()">Log In</button>
+            <button type="button"
+                    onclick="document.getElementById('login-modal').style.display='none'"
+                    class="cancelbtn">Cancel
+            </button>
+            <div id="quick-notification">Some text some message..</div>
+        </div>
+        <p>Forgot Password? <a href="reset-password-2.html">Reset>></a></p>
+        <p>Don't have an account? <a href="signup.html">Register>></a></p>
+    </form>
+</div>
+
+<div class="wrapper-main">
+    <footer>
+        <p>Fast Food Fast, Copyright &copy; 2018</p>
+    </footer>
+</div>
+
+<script src="../src/index.js"></script>
+<!--<script src="../UI/js/register.js"></script>-->
+<!--<script src="../src/auth.js"></script>-->
+<script src="../UI/js/login.js"></script>
+<!--<script src="../build/app.bundle.js"></script>-->
+<script>
+    // Get the modal
+    const modal = document.getElementById('signup-modal');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<script>
+    // Get the modal
+    const modal = document.getElementById('login-modal');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+
+</html>
